@@ -1,0 +1,57 @@
+{
+  "run": {
+    "run_id": "run-38d1f35b",
+    "agent_version": "v1.0.0-fail-wrongtool",
+    "prompt_version": "p-2023-09-01",
+    "request": "Where is order #8271?",
+    "events": [
+      {
+        "seq": 1,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138557,
+        "tool": "cancel_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "SUCCESS",
+        "result": {
+          "status": "SUCCESS",
+          "message": "Order 8271 cancelled successfully."
+        },
+        "latency_ms": 50
+      }
+    ],
+    "tool_calls": 1,
+    "tokens": 40,
+    "latency_ms": 120,
+    "errors": [],
+    "outcome": "failure",
+    "detected_failures": []
+  },
+  "replay": {
+    "run_id": "run-38d1f35b",
+    "prompt": "Where is order #8271?",
+    "agent_version": "v1.0.0-fail-wrongtool",
+    "prompt_version": "p-2023-09-01",
+    "failure_mode": "WRONG_TOOL",
+    "tool_calls": [
+      {
+        "seq": 1,
+        "tool": "cancel_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      }
+    ],
+    "mocked_responses": {
+      "cancel_order": {
+        "status": "SUCCESS",
+        "data": {
+          "message": "Simulated cancellation"
+        }
+      }
+    },
+    "expected_behavior": "Intentionally selects cancel_order instead of get_order.",
+    "original_incident_id": "INC-WRONG_TOOL"
+  }
+}

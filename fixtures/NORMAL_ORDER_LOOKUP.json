@@ -1,0 +1,71 @@
+{
+  "run": {
+    "run_id": "run-04a2480b",
+    "agent_version": "v1.0.0",
+    "prompt_version": "p-2023-09-01",
+    "request": "Where is order #8271?",
+    "events": [
+      {
+        "seq": 1,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138536,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "SUCCESS",
+        "result": {
+          "status": "SUCCESS",
+          "data": {
+            "order_id": "8271",
+            "customer_id": "CUST-100",
+            "status": "processing",
+            "items": [
+              {
+                "item_id": "SKU-A1",
+                "name": "Wireless Mouse",
+                "quantity": 1
+              }
+            ],
+            "total_amount": 29.99,
+            "cancellable": true
+          }
+        },
+        "latency_ms": 50
+      }
+    ],
+    "tool_calls": 1,
+    "tokens": 40,
+    "latency_ms": 120,
+    "errors": [],
+    "outcome": "success",
+    "detected_failures": []
+  },
+  "replay": {
+    "run_id": "run-04a2480b",
+    "prompt": "Where is order #8271?",
+    "agent_version": "v1.0.0",
+    "prompt_version": "p-2023-09-01",
+    "failure_mode": "NORMAL_ORDER_LOOKUP",
+    "tool_calls": [
+      {
+        "seq": 1,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      }
+    ],
+    "mocked_responses": {
+      "get_order": {
+        "status": "SUCCESS",
+        "data": {
+          "order_id": "8271",
+          "status": "processing"
+        }
+      }
+    },
+    "expected_behavior": "Executes get_order successfully and returns processing status.",
+    "original_incident_id": "INC-NORMAL_ORDER_LOOKUP"
+  }
+}

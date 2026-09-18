@@ -1,0 +1,99 @@
+{
+  "run": {
+    "run_id": "run-a40b08c9",
+    "agent_version": "v1.1.0-fix-timeout",
+    "prompt_version": "p-2023-09-01",
+    "request": "Where is order #8271?",
+    "events": [
+      {
+        "seq": 1,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138561,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "TIMEOUT",
+        "result": {
+          "error": "TIMEOUT",
+          "message": "Connection timed out"
+        },
+        "latency_ms": 50
+      },
+      {
+        "seq": 2,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138562,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "TIMEOUT",
+        "result": {
+          "error": "TIMEOUT",
+          "message": "Connection timed out"
+        },
+        "latency_ms": 50
+      },
+      {
+        "seq": 3,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138562,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "TIMEOUT",
+        "result": {
+          "error": "TIMEOUT",
+          "message": "Connection timed out"
+        },
+        "latency_ms": 50
+      }
+    ],
+    "tool_calls": 3,
+    "tokens": 70,
+    "latency_ms": 120,
+    "errors": [],
+    "outcome": "failure",
+    "detected_failures": []
+  },
+  "replay": {
+    "run_id": "run-a40b08c9",
+    "prompt": "Where is order #8271?",
+    "agent_version": "v1.1.0-fix-timeout",
+    "prompt_version": "p-2023-09-01",
+    "failure_mode": "FIXED_TIMEOUT_FALLBACK",
+    "tool_calls": [
+      {
+        "seq": 1,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      },
+      {
+        "seq": 2,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      },
+      {
+        "seq": 3,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      }
+    ],
+    "mocked_responses": {
+      "get_order": {
+        "error": "TIMEOUT",
+        "message": "Connection timed out"
+      }
+    },
+    "expected_behavior": "Calls get_order exactly retry_limit+1 times and invokes fallback.",
+    "original_incident_id": "INC-FIXED_TIMEOUT_FALLBACK"
+  }
+}

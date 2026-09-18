@@ -1,0 +1,121 @@
+{
+  "run": {
+    "run_id": "run-776e6fbe",
+    "agent_version": "v1.0.0-fail-timeout",
+    "prompt_version": "p-2023-09-01",
+    "request": "Where is order #8271?",
+    "events": [
+      {
+        "seq": 1,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138548,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "TIMEOUT",
+        "result": {
+          "error": "TIMEOUT",
+          "message": "Connection timed out"
+        },
+        "latency_ms": 50
+      },
+      {
+        "seq": 2,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138548,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "TIMEOUT",
+        "result": {
+          "error": "TIMEOUT",
+          "message": "Connection timed out"
+        },
+        "latency_ms": 50
+      },
+      {
+        "seq": 3,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138548,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "TIMEOUT",
+        "result": {
+          "error": "TIMEOUT",
+          "message": "Connection timed out"
+        },
+        "latency_ms": 50
+      },
+      {
+        "seq": 4,
+        "type": "tool_execution",
+        "timestamp_ms": 1789723138548,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        },
+        "status": "TIMEOUT",
+        "result": {
+          "error": "TIMEOUT",
+          "message": "Connection timed out"
+        },
+        "latency_ms": 50
+      }
+    ],
+    "tool_calls": 4,
+    "tokens": 85,
+    "latency_ms": 120,
+    "errors": [],
+    "outcome": "failure",
+    "detected_failures": []
+  },
+  "replay": {
+    "run_id": "run-776e6fbe",
+    "prompt": "Where is order #8271?",
+    "agent_version": "v1.0.0-fail-timeout",
+    "prompt_version": "p-2023-09-01",
+    "failure_mode": "TIMEOUT_RETRY_LOOP",
+    "tool_calls": [
+      {
+        "seq": 1,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      },
+      {
+        "seq": 2,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      },
+      {
+        "seq": 3,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      },
+      {
+        "seq": 4,
+        "tool": "get_order",
+        "arguments": {
+          "order_id": "8271"
+        }
+      }
+    ],
+    "mocked_responses": {
+      "get_order": {
+        "error": "TIMEOUT",
+        "message": "Connection timed out"
+      }
+    },
+    "expected_behavior": "Repeatedly calls get_order due to timeout.",
+    "original_incident_id": "INC-TIMEOUT_RETRY_LOOP"
+  }
+}
