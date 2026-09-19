@@ -1,6 +1,6 @@
 {
   "run": {
-    "run_id": "run-776e6fbe",
+    "run_id": "run-c8fa8a25",
     "agent_version": "v1.0.0-fail-timeout",
     "prompt_version": "p-2023-09-01",
     "request": "Where is order #8271?",
@@ -8,7 +8,7 @@
       {
         "seq": 1,
         "type": "tool_execution",
-        "timestamp_ms": 1789723138548,
+        "timestamp_ms": 1789811406834,
         "tool": "get_order",
         "arguments": {
           "order_id": "8271"
@@ -23,7 +23,7 @@
       {
         "seq": 2,
         "type": "tool_execution",
-        "timestamp_ms": 1789723138548,
+        "timestamp_ms": 1789811406834,
         "tool": "get_order",
         "arguments": {
           "order_id": "8271"
@@ -38,7 +38,7 @@
       {
         "seq": 3,
         "type": "tool_execution",
-        "timestamp_ms": 1789723138548,
+        "timestamp_ms": 1789811406834,
         "tool": "get_order",
         "arguments": {
           "order_id": "8271"
@@ -53,7 +53,7 @@
       {
         "seq": 4,
         "type": "tool_execution",
-        "timestamp_ms": 1789723138548,
+        "timestamp_ms": 1789811406834,
         "tool": "get_order",
         "arguments": {
           "order_id": "8271"
@@ -74,7 +74,7 @@
     "detected_failures": []
   },
   "replay": {
-    "run_id": "run-776e6fbe",
+    "run_id": "run-c8fa8a25",
     "prompt": "Where is order #8271?",
     "agent_version": "v1.0.0-fail-timeout",
     "prompt_version": "p-2023-09-01",

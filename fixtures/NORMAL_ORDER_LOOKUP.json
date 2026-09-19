@@ -1,6 +1,6 @@
 {
   "run": {
-    "run_id": "run-04a2480b",
+    "run_id": "run-0022a97e",
     "agent_version": "v1.0.0",
     "prompt_version": "p-2023-09-01",
     "request": "Where is order #8271?",
@@ -8,7 +8,7 @@
       {
         "seq": 1,
         "type": "tool_execution",
-        "timestamp_ms": 1789723138536,
+        "timestamp_ms": 1789811406825,
         "tool": "get_order",
         "arguments": {
           "order_id": "8271"
@@ -42,7 +42,7 @@
     "detected_failures": []
   },
   "replay": {
-    "run_id": "run-04a2480b",
+    "run_id": "run-0022a97e",
     "prompt": "Where is order #8271?",
     "agent_version": "v1.0.0",
     "prompt_version": "p-2023-09-01",

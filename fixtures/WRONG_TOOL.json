@@ -1,6 +1,6 @@
 {
   "run": {
-    "run_id": "run-38d1f35b",
+    "run_id": "run-348a5fe5",
     "agent_version": "v1.0.0-fail-wrongtool",
     "prompt_version": "p-2023-09-01",
     "request": "Where is order #8271?",
@@ -8,7 +8,7 @@
       {
         "seq": 1,
         "type": "tool_execution",
-        "timestamp_ms": 1789723138557,
+        "timestamp_ms": 1789811406838,
         "tool": "cancel_order",
         "arguments": {
           "order_id": "8271"
@@ -29,7 +29,7 @@
     "detected_failures": []
   },
   "replay": {
-    "run_id": "run-38d1f35b",
+    "run_id": "run-348a5fe5",
     "prompt": "Where is order #8271?",
     "agent_version": "v1.0.0-fail-wrongtool",
     "prompt_version": "p-2023-09-01",
